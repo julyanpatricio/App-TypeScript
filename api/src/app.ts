@@ -3,6 +3,7 @@ import express, {Application, Request, Response, NextFunction} from 'express';
 import morgan from 'morgan';
 import config from './lib/config';
 import cors from 'cors'
+import routes from './routes/index';
 
 const app: Application = express();
 
@@ -28,6 +29,8 @@ app.use(
 app.get('/', (req: Request, res: Response) => {
 	res.send('hola typescript!');
 });
+
+app.use('/api', routes);
 
 
 app.use((err: error, req: Request, res: Response, next: NextFunction) => {
