@@ -1,3 +1,9 @@
+import { FetchUsersAction, DeleteUsersAction } from './index';
+
+
 export enum ActionTypes {
-  fetchUsers,
+	fetchUsers,
+	deleteUser
 }
+
+export type Action = FetchUsersAction | DeleteUsersAction;

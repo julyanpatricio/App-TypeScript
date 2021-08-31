@@ -7,7 +7,7 @@ import store from './store';
 
 ReactDOM.render(
 	<Provider store={store}>
-		<App title='henry workshop'/>
+		<App />
 	</Provider>,
 	document.querySelector('#root')
 );
