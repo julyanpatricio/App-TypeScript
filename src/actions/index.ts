@@ -29,9 +29,9 @@ export const fetchUsers = () => {
 	};
 };
 
-export const deleteUser = () => {
+export const deleteUser = () => { 
 	return async (dispatch: Dispatch) => {
-		const response = await axios.delete<User[]>(url);
+		const response = await axios.delete<User[]>(url); //enviar por body el id del user
 		dispatch<DeleteUsersAction>({
 			type: ActionTypes.deleteUser,
 			payload: response.data,
